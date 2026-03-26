@@ -3,11 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ToDo List</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <div id="site-logo">TD</div>
+        <h1>To Do List</h1>
+        <h2></h2>
+        <nav>
+            <ul>
+                <li><a href="./index.html">To Do List</a></li>
+                <li><a href="./goals.html">Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button>Add Item</button>
+        <form class="switch">
+            <label for="toggle">Grid/List</label>
+            <input id="toggle" type="checkbox">
+            <span class="slider"></span>
+        </form>
+        <h3 class="qlabel horizontal">Urgent</h3>
+        <h3 class="qlabel horizontal">Not Urgent</h3>
+        <h3 class="qlabel vertical">Important</h3>
+        <section class="list-card" id="quadrant1">
+            <ul>
+                <li>
+                    Item 1
+                </li>
+                <li>
+                    Item 2
+                </li>
+            </ul>
+        </section>
+        <section class="list-card" id="quadrant2">
+            <ul>
+                <li>
+                    Item 1
+                </li>
+            </ul>
+        </section>
+        <h3 class="qlabel vertical">Not Important</h3>
+        <section class="list-card" id="quadrant3">
+            <ul>
+                <li>
+                    Item 1
+                </li>
+            </ul>
+        </section>
+        <section class="list-card" id="quadrant4">
+            <ul>
+                <li>
+                    Item 1
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&#169; 2026. Jacob Taufer & Jacob Sanchez - WDD 231</p>
+        <ul>
+            <li><a href="./index.html">To Do List</a></li>
+            <li><a href="./goals.html">Goals</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
