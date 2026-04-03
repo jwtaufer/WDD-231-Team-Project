@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --logo-font: 'Bungee', sans-serif;
+    --main-font: 'Roboto', sans-serif;
+
+    --accent-color: #4B92FA;
+    --button-color: navy;
+    --dark-text-color: black;
+    --light-text-color: white;
+    --logo-font: 'Bungee', sans-serif;
+    --main-font: 'Roboto', sans-serif;
+}
