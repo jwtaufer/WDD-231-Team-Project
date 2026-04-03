@@ -24,10 +24,6 @@ main {
     border-radius: 5px;
 }
 
-.hidden {
-    display: none;
-}
-
 /*** header/footer ***/
 
 header, footer {
@@ -38,7 +34,8 @@ header, footer {
 }
 
 header {
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
 }
 
 footer {
@@ -103,15 +100,48 @@ footer ul li a {
 
 /* nav */
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 header nav {
     padding: 1rem;
     display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header nav {
+    align-items: end;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu ul {
+    margin: 0;
+    padding: 0;
     display: none;
+    font-size: 1.5;
+    font-weight: bold;
     list-style-type: none;
 }
+
+.nav-menu.active ul {
+    display: flex;
+}
+
+.nav-menu ul li a {
+    display: flex;
+    align-items: center;
+    background-color: var(--button-color);
+    margin: 5px;
+    margin-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+}
+
 
 .nav-menu ul li a {
     text-decoration: none;
@@ -121,6 +151,7 @@ header nav {
 .hamburger-button {
     height: 50px;
     width: 50px;
+    margin: 10px;
     margin-left: auto;
     position: relative;
 }
@@ -156,7 +187,7 @@ header nav {
 
 .hamburger-button.active span:nth-child(3) {
     top:50%;
-    transform: translate(-50%, 50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 #top-bar {
@@ -186,31 +217,12 @@ header nav {
     /* nav */
 
     header {
+        flex-direction: row;
         align-items: end;
-    }
-
-    header nav {
-        align-items: end;
-        margin: 0;
-        padding: 0;
     }
 
     .nav-menu ul {
-        margin: 0;
-        padding: 0;
         display: flex;
-        font-size: 1.5;
-        font-weight: bold;
-    }
-
-    .nav-menu ul li a {
-        display: flex;
-        align-items: center;
-        background-color: var(--button-color);
-        margin: 5px;
-        margin-bottom: 0;
-        border-radius: 5px 5px 0 0;
-        padding: 10px;
     }
 
     .nav-menu ul li a.active {
