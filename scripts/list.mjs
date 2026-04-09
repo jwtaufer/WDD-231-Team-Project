@@ -6,7 +6,7 @@ class TaskList {
         this.list = [];
     }
 
-    add() {
+    add(task) {
         this.list.push(task);
     }
 
@@ -39,3 +39,17 @@ q1.add(new Task("Homework", "04/08/2026", "Finish Semester"));
 q1.add(new Task("Vacuum"));
 
 document.querySelector("#quadrant1").innerHTML = q1.renderList();
+
+//
+
+document.querySelector(".submit").addEventListener("click", function(){
+    const taskName = document.querySelector("#chore");
+    const date = document.querySelector("#due-date");
+    const goal = document.querySelector("#goal");
+
+    const task = new Task(taskName, date, goal);
+
+    q1.add(task);
+})
+
+console.log(q1.list);
