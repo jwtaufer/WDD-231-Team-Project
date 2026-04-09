@@ -13,8 +13,40 @@ main {
     display: none;
 }
 
+.task {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    /* border: 1px solid gray; */
+    border-radius: 5px;
+}
+
+.task-label {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.drop-down {
+    padding: 5px;
+    padding-left: 2em;
+    border-top: 1px solid gray;
+    overflow: hidden;
+}
+
+.drop-down-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+.drop-down.closed {
+    display: none;
+}
+
 @media (width > 767px) {
-    
     .switch {
         display: flex;
     }

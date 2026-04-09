@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List</title>
     <link rel="stylesheet" href="./styles/goals.css">
-    <script src="./scripts/global.js" defer></script>
+    <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -34,28 +34,20 @@
     </header>
     <main>
         <section id="top-bar">
-            <button>Add Item</button>
+            <button id="open-modal">Add Goal</button>
         </section>
+        <form id="goal-modal" class="modal" aria-labelledby="modal-title" aria-modal="true" aria-hidden="true">
+            <section class="modal-content">
+                <span class="close-button" aria-label="Close modal">&times;</span>
+                <h2 class="modal-title">New Goal</h2>
+                <label for="goal">Enter goal name:</label>
+                <input id="goal" type="text">
+                <input class="submit" type="submit" />
+            </section>
+        </form>
         <section class="list-card">
             <ul>
-                <li>
-                    Item 1
-                </li>
-                <li>
-                    Item 2
-                </li>
-                <li>
-                    Item 3
-                </li>
-                <li>
-                    Item 4
-                </li>
-                <li>
-                    Item 5
-                </li>
-                <li>
-                    Item 6
-                </li>
+                <li>My goal</li>
             </ul>
         </section>
     </main>

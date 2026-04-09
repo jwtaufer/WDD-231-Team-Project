@@ -204,6 +204,55 @@ header nav {
     border-radius: 5px;
 }
 
+/* modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 10px solid gray;
+    width: 80%;
+}
+
+.modal-content > * {
+    display: block;
+    margin: 5px;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content .submit {
+    margin: 5px auto;
+}
+
+.close-button {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover {
+    cursor: pointer;
+}
+
+.open {
+    display: block;
+}
+
 /*** body ***/
 
 @media (width > 520px) {

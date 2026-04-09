@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List</title>
     <link rel="stylesheet" href="./styles/todo.css">
-    <script src="./scripts/global.js" defer></script>
+    <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -34,39 +34,64 @@
     </header>
     <main>
         <section id="top-bar">
-            <button>Add Item</button>
+            <button id="open-modal">Add Task</button>
             <form class="switch">
                 <label for="toggle">Grid</label>
                 <input id="toggle" type="checkbox" checked>
                 <span class="slider"></span>
             </form>
         </section>
+        <form id="modal" class="modal" aria-labelledby="modal-title" aria-modal="true" aria-hidden="true">
+            <section class="modal-content">
+                <span class="close-button" aria-label="Close modal">&times;</span>
+                <h2 class="modal-title">New Task</h2>
+                <label for="chore">Enter task name *:</label>
+                <input id="chore" type="text" required>
+                <label for="due-date">Enter the task's due date, if any:</label>
+                <input id="due-date" type="date">
+                <label for="goal">Select a goal that this task helps you achieve, if any:</label>
+                <select id="goal">
+                    <option></option>
+                </select>
+                <span>* required</span>
+                <input class="submit" type="submit" />
+            </section>
+        </form>
         <h3 class="qlabel horizontal" id="urgent">Urgent</h3>
         <h3 class="qlabel horizontal" id="not-urgent">Not Urgent</h3>
         <h3 class="qlabel vertical" id="important">Important</h3>
         <section class="list-card" id="quadrant1">
             <form>
                 <ul>
-                    <li>
-                        <input type="checkbox">
-                        <label>Homework</label>
-                        <input type="date" value="2026-04-08">
-                        <select>
-                            <option value="goal1">Finish Semester</option>
-                        </select>
+                    <li class="task" id="q1-1">
+                        <span class="task-label">
+                            <input type="checkbox">
+                            <p>Task Name</p>
+                            <button class="drop-down-button">&#9666;</button>
+                        </span>
+                        <span class="drop-down closed">
+                            <p>Due: mm/dd/yyyy</p>
+                            <p>Associated Goal: <em>goal</em></p>
+                        </span>
                     </li>
                 </ul>
             </form>
         </section>
         <section class="list-card" id="quadrant2">
-            <form></form>
+            <form>
+                <ul></ul>
+            </form>
         </section>
         <h3 class="qlabel vertical" id="not-important">Not Important</h3>
         <section class="list-card" id="quadrant3">
-            <form></form>
+            <form>
+                <ul></ul>
+            </form>
         </section>
         <section class="list-card" id="quadrant4">
-            <form></form>
+            <form>
+                <ul></ul>
+            </form>
         </section>
     </main>
     <footer>
